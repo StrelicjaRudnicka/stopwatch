@@ -1,13 +1,13 @@
 window.onload = function () {
   
-    var seconds = 00; 
-    var tens = 00; 
-    var appendTens = document.getElementById("tens")
-    var appendSeconds = document.getElementById("seconds")
-    var buttonStart = document.getElementById('button-start');
-    var buttonStop = document.getElementById('button-stop');
-    var buttonReset = document.getElementById('button-reset');
-    var Interval ;
+    let seconds = 00; 
+    let tens = 00; 
+    let appendTens = document.getElementById("tens")
+    let appendSeconds = document.getElementById("seconds")
+    let buttonStart = document.getElementById('button-start');
+    let buttonStop = document.getElementById('button-stop');
+    let buttonReset = document.getElementById('button-reset');
+    let Interval ;
   
     buttonStart.onclick = function() {
       
@@ -24,8 +24,8 @@ window.onload = function () {
        clearInterval(Interval);
       tens = "00";
         seconds = "00";
-      appendTens.innerHTML = tens;
-        appendSeconds.innerHTML = seconds;
+      appendTens.innerText = tens;
+        appendSeconds.innerText = seconds;
     }
     
      
@@ -34,24 +34,24 @@ window.onload = function () {
       tens++; 
       
       if(tens <= 9){
-        appendTens.innerHTML = "0" + tens;
+        appendTens.innerText = "0" + tens;
       }
       
       if (tens > 9){
-        appendTens.innerHTML = tens;
+        appendTens.innerText = tens;
         
       } 
       
       if (tens > 99) {
         console.log("seconds");
         seconds++;
-        appendSeconds.innerHTML = "0" + seconds;
+        appendSeconds.innerText = "0" + seconds;
         tens = 0;
-        appendTens.innerHTML = "0" + 0;
+        appendTens.innerText = "0" + 0;
       }
       
       if (seconds > 9){
-        appendSeconds.innerHTML = seconds;
+        appendSeconds.innerText = seconds;
       }
     
     }
